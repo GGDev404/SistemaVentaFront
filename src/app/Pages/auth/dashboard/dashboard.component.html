@@ -1,0 +1,16 @@
+<app-nav></app-nav>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let product of products">
+      <div class="card h-100 shadow-sm">
+        <img [src]="product.imageUrl" class="card-img-top" alt="{{ product.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text">Price: {{ product.price | currency }}</p>
+          <button (click)="productoDetail(product.productId)" class="btn btn-primary">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
